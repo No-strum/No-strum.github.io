@@ -57,7 +57,7 @@
                 <div style="margin-top:3%; text-align:justify;">     
 					<p>Hello!<p>
 					<p>My name is Zhanyuan Tian and I am a senior student at Wuhan University in Hubei, China. <p>
-					<p>My main research focuses on improving performance on computer vision tasks using networks backbone and algorithms from other domains, like NLP(Natural Language Processing) and GNN(Graph Neural Network). I'm also interested in applications of AI in science, especially in chemistry, such as chiral drug design or modeling molecules interaction.<p>
+					<p>My main research focuses on improving performance on computer vision tasks using network backbones and algorithms from other domains, like NLP(Natural Language Processing) and GNN(Graph Neural Network). I'm also interested in applications of AI in science, especially in chemistry, such as chiral drug design or modeling molecules interaction.<p>
 					<p> I'm currently working on three projects: </p>
 					<ul>
 					  <li>Finetune my depth-prior-MVS network to make it perform better. It currently achieving a result of <b>0.339/0.274</b> (acc./comp.) metrics on DTU. The code will release soon!</li>
@@ -91,44 +91,38 @@
             <div class="col-md-8" style="height: 100vh;">    
                 <h2 id="Projects">Projects</h2>
                 
-                      <tr onmouseout="zipnerf_stop()" onmouseover="zipnerf_start()"  bgcolor="#ffffd0">
+                      <tr onmouseout="depth-prior-MVS_stop()" onmouseover="depth-prior-MVS_start()">
 		        <td style="padding:20px;width:25%;vertical-align:middle">
 		          <div class="one">
-		            <div class="two" id='zipnerf_image'><video  width=100% height=100% muted autoplay loop>
-		            <source src="images/zipnerf.mp4" type="video/mp4">
+		            <div class="two" id='depth-prior-MVS'><video  width=100% height=100% muted autoplay loop>
+		            <source src="imgs/depth-prior-MVS.png" type="video/mp4">
 		            Your browser does not support the video tag.
 		            </video></div>
-		            <img src='images/zipnerf.jpg' width="160">
+		            <img src='imgs/depth-prior-MVS.png' width="160">
 		          </div>
 		          <script type="text/javascript">
-		            function zipnerf_start() {
-		              document.getElementById('zipnerf_image').style.opacity = "1";
+		            function depth-prior-MVS_start() {
+		              document.getElementById('depth-prior-MVS').style.opacity = "1";
 		            }
 		
-		            function zipnerf_stop() {
-		              document.getElementById('zipnerf_image').style.opacity = "0";
+		            function depth-prior-MVS_stop() {
+		              document.getElementById('depth-prior-MVS').style.opacity = "0";
 		            }
 		            zipnerf_stop()
 		          </script>
 		        </td>
 		        <td style="padding:20px;width:75%;vertical-align:middle">
 		          <a href="http://jonbarron.info/zipnerf">
-		            <span class="papertitle">Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields</span>
+		            <span class="papertitle">depth-prior-MVS: Bootstrap the Transformer aggregation range based on the depth prior information and compute the Bayesian probability of each pixel depth</span>
 		          </a>
 		          <br>
-		          <strong>Jonathan T. Barron</strong>,
-		          <a href="https://bmild.github.io/">Ben Mildenhall</a>,
-		          <a href="https://scholar.harvard.edu/dorverbin/home">Dor Verbin</a>,
-		          <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
-		          <a href="https://phogzone.com/">Peter Hedman</a>
+		          <strong>Zhanyuan Tian</strong>,
+		          <a>Jiaqi Jiang</a>,
+		          <a href="https://cvrs.whu.edu.cn/lili/">Li Li</a>,
+		          <a>Jian Yao</a>
 		          <br>
-		          <em>ICCV</em>, 2023 &nbsp <font color="red"><strong>(Oral Presentation, Best Paper Finalist)</strong></font>
 		          <br>
 		          <a href="http://jonbarron.info/zipnerf">project page</a>
-		          /
-		          <a href="https://www.youtube.com/watch?v=xrrhynRzC8k">video</a>
-		          /
-		          <a href="https://arxiv.org/abs/2304.06706">arXiv</a>
 		          <p></p>
 		          <p>
 		          Combining mip-NeRF 360 and grid-based models like Instant NGP lets us reduce error rates by 8%&ndash;77% and accelerate training by 24x.
@@ -141,21 +135,12 @@
 		        <td style="padding:20px;width:25%;vertical-align:middle">
 		          <div class="one">
 		            <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
-		            <source src="images/owl.mp4" type="video/mp4">
+		            <source src="imgs/P2PRN.png" type="video/mp4">
 		            Your browser does not support the video tag.
 		            </video></div>
-		            <img src='images/owl.png' width="160">
+		            <img src='imgs/P2PRN.png' width="160">
 		          </div>
-		          <script type="text/javascript">
-		            function db3d_start() {
-		              document.getElementById('db3d_image').style.opacity = "1";
-		            }
-		
-		            function db3d_stop() {
-		              document.getElementById('db3d_image').style.opacity = "0";
-		            }
-		            db3d_stop()
-		          </script>
+		          
 		        </td>
 		        <td style="padding:20px;width:75%;vertical-align:middle">
 		          <a href="https://dreambooth3d.github.io/">
