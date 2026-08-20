@@ -33,7 +33,7 @@
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
-        <a href="#awards">Awards</a>
+        <a href="#awards">Scholarship </a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -43,10 +43,18 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">PhD Researcher · Imperial College London</p>
+          <p class="eyebrow">
+            PhD Researcher ·
+            <a
+              class="institution-link"
+              href="https://www.imperial.ac.uk/fluid-mechanics/hydrodynamics-laboratory/"
+              target="_blank"
+              rel="noopener"
+            >Imperial College London</a>
+          </p>
           <h1>
             Zhanyuan Tian
-            <span>Fluid mechanics through sensing, vision & computation.</span>
+            <span>Fluid Mechanics through vision, AI & computation.</span>
           </h1>
 
           <p class="hero-text">
@@ -72,27 +80,34 @@
         </div>
 
         <aside class="profile-card reveal" aria-label="Profile summary">
-          <div class="profile-mark">ZT</div>
+          <div class="profile-photo">
+            <span aria-hidden="true">ZT</span>
+            <img
+              src="assets/zt.png"
+              alt="Portrait of Zhanyuan Tian"
+              onerror="this.hidden=true"
+            />
+          </div>
           <p class="profile-kicker">Current focus</p>
           <h2>Observing breaking waves with computer vision.</h2>
           <p>
             Combining stereo-reconstructed sea-surface measurements,
-            automated whitecap tracking, optical flow and wave physics to
-            investigate breaking-wave kinematics and energy dissipation.
+            automated whitecap tracking, BERT-based classification and wave
+            physics to investigate breaking-wave kinematics and energy dissipation.
           </p>
           <div class="mini-stat-grid">
-            <div>
-              <strong>ICL</strong>
-              <span>PhD</span>
-            </div>
-            <div>
-              <strong>CV</strong>
-              <span>Vision</span>
-            </div>
-            <div>
-              <strong>Waves</strong>
-              <span>Physics</span>
-            </div>
+            <a class="profile-link" href="https://github.com/No-strum/Zhanyuan-Tian" target="_blank" rel="noopener">
+              <strong>GitHub</strong>
+              <span>@No-strum</span>
+            </a>
+            <a class="profile-link" href="https://www.linkedin.com/in/zhanyuan-tian/" target="_blank" rel="noopener">
+              <strong>LinkedIn</strong>
+              <span>Connect</span>
+            </a>
+            <a class="profile-link" href="mailto:yztian@whu.edu.cn">
+              <strong>Email</strong>
+              <span>Get in touch</span>
+            </a>
           </div>
         </aside>
       </div>
@@ -118,14 +133,20 @@
 
         <div class="prose reveal">
           <p>
-            I am a PhD researcher in Fluid Mechanics at Imperial College London.
+            I am currently a PhD student (2024-2028) in Fluid Mechanics at
+            <a
+              class="institution-link"
+              href="https://www.imperial.ac.uk/fluid-mechanics/hydrodynamics-laboratory/"
+              target="_blank"
+              rel="noopener"
+            >Imperial College London</a>.
             My research connects physical understanding of the ocean surface with
             modern sensing and computer-vision methods.
           </p>
           <p>
             Before my PhD, I studied Remote Sensing Information Engineering at
-            Wuhan University, where I worked on multi-view stereo, image matching,
-            point-cloud processing and multimodal geospatial data.
+            Wuhan University (2020-2024), where I worked on multi-view stereo, image processing,
+            lidar&point-cloud and multispectral geospatial data.
           </p>
           <p>
             I am especially interested in research where algorithms do more than
@@ -142,22 +163,32 @@
           <p class="eyebrow">Current PhD Research</p>
           <h2>Breaking waves, whitecaps and ocean-surface kinematics.</h2>
           <p class="section-intro">
-            A computer-vision and remote-sensing framework for extracting
-            breaking-wave statistics from stereo observations of the sea surface.
+            A computer-vision and remote-sensing framework combining stereo
+            observations, automated whitecap tracking and a BERT-based classifier
+            fine-tuned on more than 10,000 annotated whitecaps.
           </p>
         </div>
 
         <article class="featured-project reveal">
           <div class="featured-main">
             <div class="project-number">01</div>
-            <p class="project-label">Imperial College London · PhD Project</p>
+            <p class="project-label">
+              <a
+                class="institution-link"
+                href="https://www.imperial.ac.uk/fluid-mechanics/hydrodynamics-laboratory/"
+                target="_blank"
+                rel="noopener"
+              >Imperial College London · Hydrodynamics Laboratory</a>
+              · PhD Project
+            </p>
             <h3>Automated Whitecap Detection, Tracking & Wave-Breaking Analysis</h3>
             <p>
-              My current PhD work develops and improves methods for identifying
-              whitecaps, tracking breaking events, and estimating their motion
-              from ocean imagery. The aim is to connect image-derived breaking
-              statistics with wave kinematics and the directional distribution
-              of energy dissipation.
+              My current PhD work develops methods for identifying and tracking
+              whitecaps, estimating their motion from ocean imagery, and
+              classifying breaking events with a BERT-based model fine-tuned on
+              more than 10,000 annotated whitecaps. The aim is to connect
+              image-derived breaking statistics with wave kinematics and the
+              directional distribution of energy dissipation.
             </p>
 
             <div class="research-points">
@@ -165,7 +196,7 @@
                 <span>01</span>
                 <p>
                   <strong>Stereo ocean observations.</strong>
-                  Use WASS-style stereo reconstructions to map imagery into
+                  Use stereo reconstructions to map imagery into
                   world coordinates and recover sea-surface geometry.
                 </p>
               </div>
@@ -174,15 +205,17 @@
                 <p>
                   <strong>Whitecap detection & tracking.</strong>
                   Improve automated segmentation, background removal and
-                  event tracking across different sea states.
+                  event tracking across different sea states. Estimate breaking-front velocity and direction from image
+                  sequences.
                 </p>
               </div>
               <div>
                 <span>03</span>
                 <p>
-                  <strong>Optical-flow kinematics.</strong>
-                  Estimate breaking-front velocity and direction from image
-                  sequences, with filtering and physically informed analysis.
+                  <strong>Transformer-based classifier.</strong>
+                  Fine-tune a BERT-based model using more than 10,000 annotated
+                  whitecaps to classify breaking events and improve the
+                  reliability of downstream statistics.
                 </p>
               </div>
               <div>
@@ -220,6 +253,8 @@
               <span>WASS</span>
               <span>Optical Flow</span>
               <span>Whitecaps</span>
+              <span>BERT</span>
+              <span>10K+ Annotations</span>
               <span>Stereo Vision</span>
               <span>Wave Breaking</span>
               <span>Energy Dissipation</span>
@@ -315,7 +350,14 @@
             <div class="timeline-dot"></div>
             <div class="timeline-meta">Current</div>
             <div class="timeline-content">
-              <h3>Imperial College London</h3>
+              <h3>
+                <a
+                  class="institution-link"
+                  href="https://www.imperial.ac.uk/fluid-mechanics/hydrodynamics-laboratory/"
+                  target="_blank"
+                  rel="noopener"
+                >Imperial College London</a>
+              </h3>
               <p class="degree">PhD · Fluid Mechanics</p>
               <p>
                 Research in ocean-wave breaking, stereo remote sensing,
@@ -345,7 +387,7 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Selected Recognition</p>
-          <h2>Awards & honours.</h2>
+          <h2>Awards & Scholarship.</h2>
         </div>
 
         <div class="award-grid">
@@ -387,7 +429,7 @@
           </div>
           <div class="skill-group reveal">
             <h3>Machine Learning & Vision</h3>
-            <p>PyTorch · OpenCV workflows · MVS · Feature Matching · Optical Flow</p>
+              <p>PyTorch · BERT · Transformers · OpenCV workflows · MVS · Feature Matching · Optical Flow</p>
           </div>
           <div class="skill-group reveal">
             <h3>Scientific Computing</h3>

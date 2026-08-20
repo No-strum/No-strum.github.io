@@ -276,18 +276,30 @@ h1 span {
   filter: blur(2px);
 }
 
-.profile-mark {
+.profile-photo {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 68px;
-  height: 68px;
-  margin-bottom: 58px;
-  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 300px;
+  margin-bottom: 34px;
+  overflow: hidden;
+  border-radius: 22px;
   background: linear-gradient(135deg, rgba(88,213,211,.18), rgba(128,168,255,.14));
   color: var(--accent);
   border: 1px solid rgba(88, 213, 211, 0.28);
-  font-size: 1.35rem;
+  font-size: 2.2rem;
   font-weight: 900;
+}
+
+.profile-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
 }
 
 .profile-kicker {
@@ -315,17 +327,40 @@ h1 span {
   margin-top: 28px;
 }
 
-.mini-stat-grid div {
+.profile-link {
+  position: relative;
+  z-index: 1;
   padding: 15px 10px;
   border: 1px solid var(--line);
   border-radius: 16px;
   text-align: center;
   background: rgba(255,255,255,.02);
+  transition: border-color .2s ease, transform .2s ease, background .2s ease;
+}
+
+.profile-link:hover,
+.profile-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(88, 213, 211, 0.5);
+  background: rgba(88, 213, 211, 0.08);
+  outline: none;
 }
 
 .mini-stat-grid strong,
 .mini-stat-grid span {
   display: block;
+}
+
+.institution-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(88, 213, 211, 0.45);
+  text-underline-offset: 0.22em;
+}
+
+.institution-link:hover,
+.institution-link:focus-visible {
+  color: var(--accent);
 }
 
 .mini-stat-grid strong {
